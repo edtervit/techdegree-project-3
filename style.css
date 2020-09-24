@@ -1,0 +1,74 @@
+/* Font import */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,100&display=swap');
+
+/* whole document */
+* {
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/*Focus states  */
+
+
+input:focus{
+    transition: 1s;
+    border-bottom: pink 5px solid;
+    background: lightblue;
+}
+
+/* Section styles */
+
+header{
+    display: flex;
+    background-color:#78A2CC;
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    background-color: #BFD4DB;
+}
+
+body{
+    background-color: #96B9D0;
+}
+
+
+.site-name{
+    font-size: 3em;   
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* prevents text area width from being extended */
+textarea[name=feedback] {
+    resize: vertical;
+  }
+
+
+
+/* makes thankyou message appear after form submit*/
+#thankyou {
+   display: none;
+  }
+
+ #thankyou:target {
+   display: block;
+  }
