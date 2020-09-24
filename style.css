@@ -26,31 +26,46 @@ input:focus{
 
 header{
     display: flex;
-    background-color:#78A2CC;
     padding: 2em;
     align-items: center;
     justify-content: center;
 }
 
 main{
-    background-color: #BFD4DB;
-}
+    background-color:white;}
 
 body{
-    background-color: #96B9D0;
+    background-color: #2e2e2e;
+}
+
+footer{
+    color: grey;
+}
+
+
+
+/* Text styling */
+
+
+
+.main-title{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1em;
+    color: #36577D;
 }
 
 
 .site-name{
-    font-size: 3em;   
+    font-size: 2em;   
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    color: #c3073f;
+    padding-bottom: 0.1em;
+    border-bottom: #c3073f 5px dotted;
+    
 }
-
-
-
-
 
 
 
