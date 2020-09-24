@@ -4,7 +4,7 @@
 
 /* whole document */
 * {
-    font-family: 'Roboto Mono', monospace;
+    
     box-sizing: border-box;
 }
 
@@ -32,10 +32,13 @@ header{
 }
 
 main{
-    background-color:white;}
+    background-color:white;
+    padding: 1em;
+}
 
 body{
     background-color: #2e2e2e;
+    font-family: 'Roboto Mono', monospace;
 }
 
 footer{
