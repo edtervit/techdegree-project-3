@@ -2,61 +2,75 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,100&display=swap');
 
-/* whole document */
-* {
-    
-    box-sizing: border-box;
-}
-
-
-
-
-
-
-/*Focus states  */
-
-
-input:focus{
-    transition: 1s;
-    border-bottom: pink 5px solid;
-    background: lightblue;
-}
 
 /* Section styles */
+
+body{
+    display:flex;
+    flex-direction: column;
+    background-color: #2e2e2e;
+    font-family: 'Roboto Mono', monospace;
+      
+}
 
 header{
     display: flex;
     padding: 2em;
     align-items: center;
     justify-content: center;
+    
 }
 
 main{
+
+    flex-direction: column;
+    display: flex;
     background-color:white;
     padding: 1em;
-}
-
-body{
-    background-color: #2e2e2e;
-    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0 0 40px 10px #c3073fc7;
+    
 }
 
 footer{
+    flex-direction: column;
     color: grey;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
+/* Item styling */
 
-/* Text styling */
-
-
-
-.main-title{
+legend{
     font-size: 1.5em;
-    text-align: center;
-    padding: 1em;
-    color: #36577D;
+    padding: 1em 0px;
+    font-weight: bold;
 }
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    font-size: 2em;
+    font-family:'Roboto Mono', monospace;
+    color: #c3073f;
+    background-color: #2e2e2e;
+    padding: 0.5em 0;
+}
+
+::placeholder{
+    text-align: end;
+    color: rgba(0, 0, 0, 0.8);
+   
+}
+
+/* Class styling */
 
 
 .site-name{
@@ -66,12 +80,124 @@ footer{
     font-weight: bold;
     color: #c3073f;
     padding-bottom: 0.1em;
-    border-bottom: #c3073f 5px dotted;
+  
+}
+
+.top_titles{
+    text-align: center;
     
+}
+
+.main-title{
+    font-size: 1.5em;
+    padding: 0.5em 0;
+    
+    font-weight: bold;
+}
+.sub-title{
+    padding-bottom: 20px;
+    
+} 
+
+.main-break{
+    flex-wrap: wrap;
+    border-bottom: solid 2px #2e2e2e;
+    border-top: #2e2e2e solid 5px;
+    padding-bottom:3px;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+}
+
+.item,
+.item_postcode{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.item input,
+.item select,
+.item textarea,
+.item_postcode input{
+    font-family: 'Roboto Mono', monospace;
+    background-color: #e8e8e8;
+    padding: 1.5em;
+    margin: 1em 0;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+.item input,
+.item select,
+.item textarea{
+    flex-basis: 100%;
+}
+
+
+.item_postcode input{
+    align-self: flex-start;
+    flex-basis: 20px;
+}
+
+.small-break{
+    border: 2px #2e2e2e solid;
+    margin: 1em 0;
+}
+
+.item_newsletter{
+    display: flex;
+    padding: 1em 0;
+}
+
+.item_newsletter input{
+    order: -1;
+    margin-right: 0.8em;
+}
+.item_feedback{
+    display: flex;
+    flex-direction: column;
+}
+
+.item_feedback textarea{
+    margin-top: 1em;
+    flex-basis: 7em;
+    background-color: #e8e8e8;
+}
+
+.last{
+    margin-bottom: 1.5em;    
 }
 
 
 
+/* makes thankyou message appear after form submit*/
+#thankyou {
+    display: none;
+   }
+ 
+  #thankyou:target {
+    display: block;
+    padding: 1em;
+    text-align: center;
+    color: black;
+    background-color: #cff0cc;
+    margin: 1em 0;
+   }
+
+/*Focus states  */
+
+
+input:focus{
+    transition: 1s;
+    background: #dee8eb;
+    
+}
+
+textarea:focus{
+    background: #dee8eb;
+}
 
 
 
@@ -81,12 +207,47 @@ textarea[name=feedback] {
   }
 
 
+@media (min-width: 768px){
+    
 
-/* makes thankyou message appear after form submit*/
-#thankyou {
-   display: none;
-  }
+    .item,
+    .item_postcode{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    }
 
- #thankyou:target {
-   display: block;
-  }
+    .item{
+        justify-content: space-between;
+    }
+
+    .item_postcode input{
+        justify-self: flex-end;
+    }
+
+    .item input,
+    .item textarea{
+        flex-basis: 65%;
+        justify-self: flex-end;    
+    }
+
+    .item select{
+        flex-basis: 71.2%;
+    }
+
+    .item label,
+    .item_postcode label{
+        align-self: center;   
+    }
+
+    .item_postcode label{
+        margin-right: 6.3em;
+    }
+
+    .content{
+        max-width: 768px;
+        padding: 2em;
+        align-self: center;
+        
+    }
+}
